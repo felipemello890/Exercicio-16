@@ -37,6 +37,8 @@
             textBox3 = new TextBox();
             label3 = new Label();
             button3 = new Button();
+            checkBox1 = new CheckBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -67,6 +69,7 @@
             label1.Size = new Size(47, 15);
             label1.TabIndex = 2;
             label1.Text = "Usuário";
+            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -88,9 +91,9 @@
             // 
             textBox2.Location = new Point(66, 246);
             textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 5;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -118,11 +121,34 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(197, 250);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(67, 19);
+            checkBox1.TabIndex = 9;
+            checkBox1.Text = "Mostrar";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(531, 27);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Nome";
+            label4.Click += label4_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(checkBox1);
             Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(textBox3);
@@ -134,6 +160,7 @@
             Controls.Add(button1);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +176,7 @@
         private TextBox textBox3;
         private Label label3;
         private Button button3;
+        private CheckBox checkBox1;
+        private Label label4;
     }
 }

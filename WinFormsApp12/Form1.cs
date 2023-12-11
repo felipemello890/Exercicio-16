@@ -15,8 +15,11 @@ namespace WinFormsApp12
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
             Form2 frm2 = new Form2();
             frm2.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,14 +42,32 @@ namespace WinFormsApp12
             textBox2.Text = " ";
             textBox3.Text = " ";
             MessageBox.Show("As informações foram salvas!");
+            label4.Text = Utilizador.usuario;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            { textBox2.UseSystemPasswordChar = false; }
+            else { textBox2.UseSystemPasswordChar = true; }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
     static class Utilizador
     {
-        public static string usuario;
-        public static string passe;
-        public static string email;
+        public static string? usuario;
+        public static string? passe;
+        public static string? email;
     }
 
 }

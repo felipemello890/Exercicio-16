@@ -37,6 +37,8 @@
             button3 = new Button();
             textBox3 = new TextBox();
             label3 = new Label();
+            checkBox1 = new CheckBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -89,9 +91,9 @@
             // 
             textBox2.Location = new Point(94, 208);
             textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 5;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button3
             // 
@@ -119,11 +121,33 @@
             label3.TabIndex = 8;
             label3.Text = "Email";
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(220, 212);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(67, 19);
+            checkBox1.TabIndex = 10;
+            checkBox1.Text = "Mostrar";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(544, 58);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Nome";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(checkBox1);
             Controls.Add(label3);
             Controls.Add(textBox3);
             Controls.Add(button3);
@@ -151,5 +175,7 @@
         private Button button3;
         private TextBox textBox3;
         private Label label3;
+        private CheckBox checkBox1;
+        private Label label4;
     }
 }

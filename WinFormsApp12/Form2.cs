@@ -24,6 +24,7 @@ namespace WinFormsApp12
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form1 frm1 = new Form1();
             frm1.Show();
         }
@@ -51,6 +52,34 @@ namespace WinFormsApp12
             }
             else
             { MessageBox.Show("Alguma informação está incorrecta!"); }
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            { textBox2.UseSystemPasswordChar = false; }
+            else { textBox2.UseSystemPasswordChar = true; }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            label4.Text = Utilizador.usuario;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
